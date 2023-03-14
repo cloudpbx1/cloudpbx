@@ -451,7 +451,7 @@ create() {
     ip_address=
     pbx_img=
     db_listen_address=0.0.0.0
-    db_img="cloudpbx/postgresql:14"
+    db_img="cloudpbx2023/postgresql:14"
     #  generate db password
     db_password=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 20`
     # parse parameters
