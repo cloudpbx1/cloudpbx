@@ -96,6 +96,8 @@ services:
         condition: service_completed_successfully
       database:
         condition: service_healthy
+      initdt-update:
+        condition: service_completed_successfully
 
   nats: 
     image: ${pbx_img}
