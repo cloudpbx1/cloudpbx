@@ -92,8 +92,6 @@ services:
       - /etc/localtime:/etc/localtime
       - pbx-data:/var/lib/cloudpbx/pbx
     depends_on:
-      initdt:
-        condition: service_completed_successfully
       database:
         condition: service_healthy
       initdt-update:
@@ -116,7 +114,7 @@ services:
       retries: 10
       start_period: 3s
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
 
   callmanager: 
@@ -137,7 +135,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -160,7 +158,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -178,7 +176,7 @@ services:
       - /etc/localtime:/etc/localtime
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -196,7 +194,7 @@ services:
       - /etc/localtime:/etc/localtime
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       gateway:
         condition: service_started
@@ -216,7 +214,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -240,7 +238,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -264,7 +262,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -285,7 +283,7 @@ services:
       - /etc/localtime:/etc/localtime
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -310,7 +308,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -335,7 +333,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -360,7 +358,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -385,7 +383,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
@@ -410,7 +408,7 @@ services:
       - SYS_PTRACE
     restart: always
     depends_on:
-      initdt:
+      branding:
         condition: service_completed_successfully
       nats:
         condition: service_healthy
