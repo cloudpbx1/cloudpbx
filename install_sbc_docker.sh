@@ -20,7 +20,7 @@ set_firewall(){
     firewall-cmd --reload
     firewall-cmd --permanent --add-service=ssh
     firewall-cmd --permanent --new-service=sbc || true
-    firewall-cmd --permanent --service=sbc --add-port=25000-35000/udp --add-port=5066/udp --add-port=5065/tcp --add-port=5067/tcp --add-port=5069/tcp --add-port=8882/tcp --add-port=8883/tcp --set-description="SBC"
+    firewall-cmd --permanent --service=sbc --add-port=25000-35000/udp --add-port=5066/udp --add-port=5065/tcp --add-port=5067/tcp --add-port=5069/tcp --add-port=8882/tcp --add-port=8883/tcp --add-port=10443/tcp --set-description="SBC"
     firewall-cmd --permanent --add-service=sbc
     firewall-cmd --reload
     systemctl restart firewalld
